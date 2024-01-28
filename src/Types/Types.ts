@@ -9,6 +9,7 @@ export function isString(value: unknown): value is string {
 
 /**
  * Determines whether a value is a number
+ * The value is compared to the same value because when the NaN value is provided it returns true.
  * @param value Value to check
  * @returns boolean
  */
@@ -31,7 +32,7 @@ export function isBoolean(value: unknown): value is boolean {
  * @returns boolean
  */
 export function isNull(value: unknown): value is null {
-  return typeof value === null
+  return value === null
 }
 
 /**
@@ -60,7 +61,7 @@ export function isFunction(
  * @returns boolean
  */
 export function isUndefined(value: unknown): value is undefined {
-  return typeof value === undefined
+  return value === undefined
 }
 
 /**
