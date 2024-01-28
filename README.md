@@ -1,14 +1,8 @@
----
-runme:
-  id: 01HN3A0NC7Q91S9ZMGF07KHKXJ
-  version: v2.2
----
-
 <div align="center">
 
 # types-utils
 
-A collection of functions for checking the types of values
+A collection of functions to check the types of the values provided.
 
 </div>
 
@@ -80,9 +74,12 @@ Determines whether a value is undefined
 
 Determines whether a value is undefined or null
 
-
 ## License
 
 [MIT License](/LICENSE)
 
+<div align="center">
+
 Copyright (c) 2024 Migudevelop
+
+</div>
