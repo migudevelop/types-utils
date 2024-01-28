@@ -18,7 +18,11 @@
   "author": "Migudevelop",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/migudevelop/types-utils.git"
+    "url": "https://github.com/migudevelop/types-utils.git"
+  },
+  "homepage": "https://github.com/migudevelop/types-utils.git",
+  "engines": {
+    "node": ">= 18.19.x"
   },
   "license": "MIT",
   "devDependencies": {
