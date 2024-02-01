@@ -1,10 +1,10 @@
 {
-  "name": "types-utils",
+  "name": "@migudevelop/types-utils",
   "version": "1.0.0",
+  "private": false,
   "description": "Utilities for checking types in the typescript code.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "pnpm run prebuild && tsc",
     "test": "jest",
@@ -21,7 +21,7 @@
   "author": "Migudevelop",
   "repository": {
     "type": "git",
-    "url": "https://github.com/migudevelop/types-utils.git"
+    "url": "git+https://github.com/migudevelop/types-utils.git"
   },
   "homepage": "https://github.com/migudevelop/types-utils.git",
   "engines": {
@@ -34,6 +34,9 @@
     "package.json"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
