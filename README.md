@@ -10,13 +10,13 @@ A collection of functions to check the types of the values provided.
 
 ```sh
   # NPM
-  pnpm install types-utils
+  pnpm install @migudevelop/types-utils
 
   # NPM
-  npm install types-utils
+  npm install @migudevelop/types-utils
 
   # YARN
-  yarn add types-utils
+  yarn add @migudevelop/types-utils
 ```
 
 ### Usage
@@ -25,20 +25,19 @@ Using CommonJS
 
 ```js
 // CommonJS
-const typeUtils = require('type-utils');
+const typeUtils = require('type-utils')
 
-console.log(typeUtils.isString('Programming'));
+console.log(typeUtils.isString('Programming'))
 ```
 
 Using ES6 Modules or TypeScript:
 
 ```js
 // ES6 Modules or TypeScript
-import typeUtils from 'type-utils';
+import typeUtils from 'type-utils'
 
-console.log(typeUtils.isString('Programming'));
+console.log(typeUtils.isString('Programming'))
 ```
-
 
 ## API Reference
 
