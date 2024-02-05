@@ -25,7 +25,7 @@ Using CommonJS
 
 ```js
 // CommonJS
-const typeUtils = require('type-utils')
+const typeUtils = require('@migudevelop/types-utils')
 
 console.log(typeUtils.isString('Programming'))
 ```
@@ -34,9 +34,9 @@ Using ES6 Modules or TypeScript:
 
 ```js
 // ES6 Modules or TypeScript
-import typeUtils from 'type-utils'
+import { isString } from '@migudevelop/types-utils'
 
-console.log(typeUtils.isString('Programming'))
+console.log(isString('Programming'))
 ```
 
 ## API Reference
