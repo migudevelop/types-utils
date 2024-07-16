@@ -1,0 +1,44 @@
+name: Tests
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  unit-test:
+    name: "Unit tests"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ["19.4.x"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-node
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: ./.github/actions/setup-pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Test unit
+        run: pnpm run test
+
+  # publish:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     id-token: write
+  #   needs: ["build"]
+  #   steps:
+  #   - uses: actions/checkout@v4
+  #   - uses: actions/setup-node@v4
+  #     with:
+  #       node-version: '20.x'
+  #       registry-url: 'https://registry.npmjs.org/'
+  #   - uses: actions/download-artifact@v4
+  #     with:
+  #       name: dist
+  #       path: dist
+  #   - run: npm publish --provenance --access public
+  #     env:
+  #       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
