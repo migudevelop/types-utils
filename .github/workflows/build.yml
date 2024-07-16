@@ -1,4 +1,5 @@
 name: Build
+run-name: Build test
 
 on:
   workflow_call:
@@ -12,7 +13,7 @@ jobs:
       matrix:
         node: ["18.x"]
     steps:
-      -  uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-node
         with:
           node-version: ${{ matrix.node }}

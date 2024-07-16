@@ -1,3 +1,4 @@
+name: Validate
 on:
   push:
     branches:
@@ -11,11 +12,10 @@ jobs:
   unit-test:
     uses: ./.github/workflows/tests.yml
 
-  build:
-    name: Build
+  build:     
     needs: ["unit-test"]
     uses: ./.github/workflows/build.yml
 
   # build:
-  #   needs: ["unit-test"]
+  #   needs: ["build"]
   #   uses: ./.github/workflows/build.yml
