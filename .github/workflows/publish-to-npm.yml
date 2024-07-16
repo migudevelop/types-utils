@@ -1,40 +1,34 @@
-name: Publish to npm
-
+name: "Publish to npm"
 on:
   workflow_run:
     workflows: [Validate]
-    types:
-      - completed
+    types: [completed]
     branches:
       - refactor/create-actions
 
-concurrency:  
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   publish:
+    name: Publish to npm
     runs-on: ubuntu-latest
     permissions:
       contents: read
       id-token: write
-    needs: ["build"]
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-        registry-url: 'https://registry.npmjs.org/'
-    - uses: actions/download-artifact@v4
-      with:
-        name: dist
-        path: dist
-    - shell: bash
-      run: |
-        echo "test pipeline"
-        echo ${{ github.ref }}
-        echo ${{ github.workflow }}
-        ls dist
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org/'
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - shell: bash
+        run: |
+          echo "test pipeline"
+          echo ${{ github.ref }}
+          echo ${{ github.workflow }}
+          ls dist
     # - run: npm publish --provenance --access public
     #   env:
     #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

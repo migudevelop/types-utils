@@ -1,5 +1,4 @@
 name: Build
-run-name: Build test
 
 on:
   workflow_call:
@@ -26,6 +25,7 @@ jobs:
         with:
           name: dist
           path: dist
+          retention-days: 1
 
   # publish:
   #   runs-on: ubuntu-latest
