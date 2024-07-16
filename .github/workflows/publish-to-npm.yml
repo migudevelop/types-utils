@@ -1,8 +1,7 @@
-name: "Publish to npm"
-on:
-  workflow_run:
-    workflows: [Validate]
-    types: [completed]
+name: Publish to npm
+
+on: 
+ push:
     branches:
       - refactor/create-actions
 
@@ -23,12 +22,12 @@ jobs:
         with:
           name: dist
           path: dist
-      - shell: bash
-        run: |
-          echo "test pipeline"
-          echo ${{ github.ref }}
-          echo ${{ github.workflow }}
-          ls dist
+      # - shell: bash
+      #   run: |
+      #     echo "test pipeline"
+      #     echo ${{ github.ref }}
+      #     echo ${{ github.workflow }}
+      #     ls dist
     # - run: npm publish --provenance --access public
     #   env:
     #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

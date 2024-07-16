@@ -22,23 +22,3 @@ jobs:
         run: pnpm install
       - name: Test unit
         run: pnpm run test
-
-  # publish:
-  #   runs-on: ubuntu-latest
-  #   permissions:
-  #     contents: read
-  #     id-token: write
-  #   needs: ["build"]
-  #   steps:
-  #   - uses: actions/checkout@v4
-  #   - uses: actions/setup-node@v4
-  #     with:
-  #       node-version: '20.x'
-  #       registry-url: 'https://registry.npmjs.org/'
-  #   - uses: actions/download-artifact@v4
-  #     with:
-  #       name: dist
-  #       path: dist
-  #   - run: npm publish --provenance --access public
-  #     env:
-  #       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
