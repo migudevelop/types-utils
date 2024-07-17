@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ["19.4.x"]
+        node: ["19.x"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
