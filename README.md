@@ -39,7 +39,7 @@ import { isString } from '@migudevelop/types-utils'
 console.log(isString('Programming'))
 ```
 
-## API Reference
+## Check types
 
 ### isString()
 
@@ -72,6 +72,36 @@ Determines whether a value is undefined
 ### isNullish()
 
 Determines whether a value is undefined or null
+
+<br/>
+
+## Ensure types
+
+### ensureString()
+
+Determines whether a value is a string and returns it, but otherwise returns an empty string
+
+### ensureBoolean()
+
+Determines whether a value is a boolean and returns it, but otherwise returns a false value
+
+### ensureNumber()
+
+Determines whether a value is a number and returns it, but otherwise returns a zero value
+
+### ensureUndefined()
+
+Determines whether a value is an undefined and returns it, but otherwise returns an undefined value
+
+### ensureNull()
+
+Determines whether a value is a null and returns it, but otherwise returns a null value
+
+### ensureArray()
+
+Determines whether a value is an array and returns it, but otherwise returns an empty array
+
+<br/>
 
 ## License
 
