@@ -5,9 +5,9 @@ import {
   ensureUndefined,
   ensureNull,
   ensureArray
-} from './EnsureTypes'
+} from './EnsureValues'
 
-describe('EnsureTypes', () => {
+describe('EnsureValues', () => {
   describe.each([
     {
       functionName: 'ensureString',

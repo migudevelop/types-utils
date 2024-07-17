@@ -6,6 +6,20 @@ A collection of functions to check the types of the values provided.
 
 </div>
 
+## Table of Contents
+
+<details>
+<summary><strong>Details</strong></summary>
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Utilities](#main-rules-overview)
+  * [Check types](#check-types)
+  * [Ensure types](#ensure-types)
+- [License](#license)
+
+</details>
+
 ## Installation
 
 ```sh
@@ -19,7 +33,7 @@ A collection of functions to check the types of the values provided.
   yarn add @migudevelop/types-utils
 ```
 
-### Usage
+## Usage
 
 Using CommonJS
 
@@ -39,67 +53,45 @@ import { isString } from '@migudevelop/types-utils'
 console.log(isString('Programming'))
 ```
 
-## Check types
+## Utilities
 
-### isString()
+### Check types
 
-Determines whether a value is a string
+* `isString()`: Determines whether a value is a string
 
-### isNumber()
+* `isNumber()`: Determines whether a value is a number
 
-Determines whether a value is a number
+* `isBoolean()`: Determines whether a value is a boolean
 
-### isBoolean()
+* `isNull()`: Determines whether a value is null
 
-Determines whether a value is a boolean
+* `isArray()`: Determines whether a value an array
 
-### isNull()
+* `isFunction()`: Determines whether a value is a function
 
-Determines whether a value is null
+* `isUndefined()`: Determines whether a value is undefined
 
-### isArray()
+* `isNullish()`: Determines whether a value is undefined or null
 
-Determines whether a value an array
+### Check empty values
 
-### isFunction()
+* `isEmptyString()`: Determines whether a value is an empty string
 
-Determines whether a value is a function
+* `isEmptyArray()`: Determines whether a value is an empty array
 
-### isUndefined()
+### Ensure values
 
-Determines whether a value is undefined
+* `ensureString()`: Determines whether a value is a string and returns it, but otherwise returns an empty string
 
-### isNullish()
+* `ensureBoolean()`: Determines whether a value is a boolean and returns it, but otherwise returns a false value
 
-Determines whether a value is undefined or null
+* `ensureNumber()`: Determines whether a value is a number and returns it, but otherwise returns a zero value
 
-<br/>
+* `ensureUndefined()`: Determines whether a value is an undefined and returns it, but otherwise returns an undefined value
 
-## Ensure types
+* `ensureNull()`: Determines whether a value is a null and returns it, but otherwise returns a null value
 
-### ensureString()
-
-Determines whether a value is a string and returns it, but otherwise returns an empty string
-
-### ensureBoolean()
-
-Determines whether a value is a boolean and returns it, but otherwise returns a false value
-
-### ensureNumber()
-
-Determines whether a value is a number and returns it, but otherwise returns a zero value
-
-### ensureUndefined()
-
-Determines whether a value is an undefined and returns it, but otherwise returns an undefined value
-
-### ensureNull()
-
-Determines whether a value is a null and returns it, but otherwise returns a null value
-
-### ensureArray()
-
-Determines whether a value is an array and returns it, but otherwise returns an empty array
+* `ensureArray()`: Determines whether a value is an array and returns it, but otherwise returns an empty array
 
 <br/>
 

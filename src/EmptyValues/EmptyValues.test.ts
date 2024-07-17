@@ -1,6 +1,6 @@
-import { isEmptyString, isEmptyArray } from './EmptyTypes'
+import { isEmptyString, isEmptyArray } from './EmptyValues'
 
-describe('EmptyTypes', () => {
+describe('EmptyValues', () => {
   describe('isEmptyString function', () => {
     it('should return true when the provided string is empty', () => {
       expect(isEmptyString('')).toBe(true)
