@@ -1,9 +1,10 @@
 name: Validate
+
 on:
   workflow_dispatch:
   push:
     branches:
-      - refactor/create-actions
+      - main
 
 concurrency:  
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -12,11 +13,3 @@ concurrency:
 jobs:
   unit-test:
     uses: ./.github/workflows/tests.yml
-
-  build:     
-    needs: ["unit-test"]
-    uses: ./.github/workflows/build.yml
-
-  # build:
-  #   needs: ["build"]
-  #   uses: ./.github/workflows/build.yml
