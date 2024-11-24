@@ -1,6 +1,6 @@
 {
-  "name": "@migudevelop/types-utils",
-  "version": "1.3.0",
+  "name": "types-tools",
+  "version": "1.0.0",
   "private": false,
   "description": "Utilities for checking types in the typescript code.",
   "main": "./dist/index.js",
@@ -15,7 +15,11 @@
     "types",
     "typescript",
     "utils",
-    "types-utils"
+    "types-utils",
+    "types-tools",
+    "types-support",
+    "ts",
+    "javascript"
   ],
   "author": "Migudevelop",
   "repository": {

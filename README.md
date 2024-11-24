@@ -1,6 +1,6 @@
 <div align="center">
 
-# types-utils
+# types-tools
 
 A collection of functions to check the types of the values provided.
 
@@ -24,13 +24,13 @@ A collection of functions to check the types of the values provided.
 
 ```sh
   # NPM
-  pnpm install @migudevelop/types-utils
+  pnpm install types-tools
 
   # NPM
-  npm install @migudevelop/types-utils
+  npm install types-tools
 
   # YARN
-  yarn add @migudevelop/types-utils
+  yarn add types-tools
 ```
 
 ## Usage
@@ -39,16 +39,16 @@ Using CommonJS
 
 ```js
 // CommonJS
-const typeUtils = require('@migudevelop/types-utils')
+const typeTools = require('types-tools')
 
-console.log(typeUtils.isString('Programming'))
+console.log(typeTools.isString('Programming'))
 ```
 
 Using ES6 Modules or TypeScript:
 
 ```js
 // ES6 Modules or TypeScript
-import { isString } from '@migudevelop/types-utils'
+import { isString } from 'types-tools'
 
 console.log(isString('Programming'))
 ```

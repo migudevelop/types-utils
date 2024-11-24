@@ -1,11 +1,10 @@
 name: Publish to npm
 
 on:
-  push:
-    tags:
-      - '*'
+  release:
+    types: [created]
 
-concurrency:  
+concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
@@ -15,7 +14,7 @@ jobs:
 
   publish:
     name: Publish to npm
-    needs: 
+    needs:
       - build
     runs-on: ubuntu-latest
     permissions:
