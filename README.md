@@ -1,6 +1,9 @@
 <div align="center">
 
 # types-tools
+![NPM Version](https://img.shields.io/npm/v/types-tools)
+![GitHub Release](https://img.shields.io/github/v/release/migudevelop/types-utils)
+![GitHub License](https://img.shields.io/github/license/migudevelop/types-utils)
 
 A collection of functions to check the types of the values provided.
 
@@ -15,7 +18,8 @@ A collection of functions to check the types of the values provided.
 - [Usage](#usage)
 - [Utilities](#main-rules-overview)
   * [Check types](#check-types)
-  * [Ensure types](#ensure-types)
+  * [Check empty values](#check-empty-values)
+  * [Ensure values](#ensure-values)
 - [License](#license)
 
 </details>
